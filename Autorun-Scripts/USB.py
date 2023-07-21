@@ -8,6 +8,10 @@ icon = "Firefox.ico"
 pwd = os.getcwd()
 usbdir = os.path.join(pwd, "USB")
 
+# Create the USB directory if it doesn't exist
+if not os.path.exists(usbdir):
+    os.makedirs(usbdir)
+
 if os.path.isfile(exename):
     os.remove(exename)
 
